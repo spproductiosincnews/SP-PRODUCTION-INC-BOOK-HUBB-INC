@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SP PRODUCTION BOOKS HUB</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="./style.css"
+      rel="stylesheet"
+    />
+
+  </head>
+  <body>
+    <header>
+      <h1>SP PRODUCTION BOOKS HUB</h1>
+      <p>Free E-books Download and Learn by SP PRODUCTION</p>
+    </header>
+    <div class="search-filter">
+      <input type="text" placeholder="Search by title or author..." />
+      <select>
+        <option value="">All Categories</option>
+        <option>Programming</option>
+        <option>Fiction</option>
+        <option>Business</option>
+        <option>Science</option>
+      </select>
+    </div>
+    <section class="books" id="book-list">
+      <!-- Book cards inserted by Firebase later -->
+      <div class="book-card">
+        <img src="cover-example.jpg" alt="Book Cover" class="book-cover" />
+        <div class="book-info">
+          <h3>Sample Book Title</h3>
+          <p>Author: John Doe</p>
+          <div class="tags">Programming</div>
+          <div class="rating">⭐⭐⭐⭐☆</div>
+          <button class="download-btn">Download PDF</button>
+        </div>
+      </div>
+    </section>
+    <button
+      class="upload-btn"
+      onclick="document.querySelector('.upload-form').style.display='flex'"
+    >
+      +
+    </button>
+    <div class="upload-form" onclick="this.style.display='none'">
+      <div class="form-box" onclick="event.stopPropagation()">
+        <h2>Upload Book</h2>
+        <input type="text" placeholder="Book Title" />
+        <input type="text" placeholder="Author Name" />
+        <input type="text" placeholder="Uploader Name" />
+        <select>
+          <option>Programming</option>
+          <option>Fiction</option>
+          <option>Business</option>
+          <option>Science</option>
+        </select>
+        <input type="file" accept=".pdf" />
+        <input type="text" placeholder="Optional Download Link" />
+        <input type="number" placeholder="Rating (1-5)" max="5" />
+        <button>Upload</button>
+      </div>
+    </div>
+    <footer>
+      Copyright ©️ SP PRODUCTION INC – MANAGED BY SP PRODUCTION INC
+    </footer>
+  </body>
+</html>
